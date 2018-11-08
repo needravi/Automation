@@ -20,6 +20,18 @@ import org.openqa.selenium.remote.RemoteWebDriver;
 
 
 public class Utility {
+
+	public static void sleep(int t) {
+		try {
+			
+			Thread.sleep(t);
+		}
+		catch(Exception e)
+		{
+			e.printStackTrace();
+		}
+	}
+	
 	public static String getPropertyValue(String path,String key) {
 		String v="";
 		try {
@@ -35,12 +47,11 @@ public class Utility {
 	
 	public static void writeResulttoXL(String path,int passcount,int failcount) {
 		try {
-		
-		Workbook w = WorkbookFactory.create(new FileInputStream(path));
-		w.getSheet("sheet1").getRow(1).getCell(0).setCellValue(passcount);
-		w.getSheet("sheet1").getRow(1).getCell(1).setCellValue(failcount);
-		w.write(new FileOutputStream(path));
-		}
+				Workbook w = WorkbookFactory.create(new FileInputStream(path));
+				w.getSheet("sheet1").getRow(1).getCell(0).setCellValue(passcount);
+				w.getSheet("sheet1").getRow(1).getCell(1).setCellValue(failcount);
+				w.write(new FileOutputStream(path));
+			}
 	catch(Exception e) {
 		e.printStackTrace();
 		}

@@ -10,7 +10,7 @@ public class TestDemo extends BaseTest {
 @Test
 public void testA() {
 	driver.manage().window().maximize();
-	Reporter.log("Login window Maximized",true);	
+	Reporter.log("Login window Maximized",true);
 //Assert.fail();
 }
 }

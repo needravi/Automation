@@ -5,13 +5,13 @@
     <parameter name="ip" value="localhost"/>
     <parameter name="browser" value="chrome"/>
     <classes>
-      <class name="script.TestDemo">
+      <class name="script.TestDemo2">
         <methods>
           <include name="openApp"/>
-          <include name="testA"/>
+          <include name="test"/>
           <include name="closeApp"/>
         </methods>
-      </class> <!-- script.TestDemo -->
+      </class> <!-- script.TestDemo2 -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->
